@@ -10,6 +10,8 @@ print('-' * 46)
 
 #Variavel do valor total a ser pago
 total = 0 
+#Variavel do valor do produto
+valor = 0
 
 #Estrutura de repetição com loop infinito 
 while True:
@@ -34,21 +36,23 @@ while True:
     if sabor == 'CP':
         #Verifica o tamanho solicitado e o total recebe a soma 
         if tamanho == 'P':
-            total += 9
+            valor = 9 
         elif tamanho == 'M':
-            total += 14
+            valor = 14 
         elif tamanho == 'G':
-            total += 18
-        print(f'Você pediu um Cupuaçu no tamanho {tamanho}: R${total}\n')
+            valor = 18 
+        print(f'Você pediu um Cupuaçu no tamanho {tamanho}: R${valor}\n')
                                             
     if sabor == 'AC':  
         if tamanho == 'P':
-            total += 11
+            valor = 11 
         elif tamanho == 'M':
-            total += 16
+            valor = 16 
         elif tamanho == 'G':
-            total += 20
-        print(f'Você pediu um Açaí no tamanho {tamanho}: R${total}\n')
+            valor = 20 
+        print(f'Você pediu um Açaí no tamanho {tamanho}: R${valor}\n')
+        
+    total += valor
      
     #Print perguntando se o usuario deseja algo a mais
     continuar = input('Deseja mais alguma coisa? (S/N): ').upper()
