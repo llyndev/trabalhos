@@ -9,49 +9,50 @@ print('-' * 3, '|' ,'   G   ','|', '   R$ 18.00 ', '|', ' R$ 20.00', '|', '-' * 
 print('-' * 46)
 
 #Variavel do valor total a ser pago
-total = 0 
+total = 0
 #Variavel do valor do produto
 valor = 0
 
-#Estrutura de repetição com loop infinito 
+#Estrutura de repetição com loop infinito
 while True:
     
     #Recebe o sabor desejado do cliente
-    sabor = input('Entre com o sabor desejado (CP/AC): ').upper()  
+    sabor = input('Entre com o sabor desejado (CP/AC): ').upper()
         
     #Verifica se o sabor esta incluso, caso não estiver executa o print e retorna ao inicio
     if sabor not in ['CP', 'AC']:
         print('Sabor inválido. Tente novamente\n')
         continue
-        
+    
     #Recebe o tamanho desejado do cliente
     tamanho = input('Entre com o tamanho desejado (P/M/G): ').upper()
-        
+    
     #Verifica se o tamanho  esta incluso, caso não estiver executa o print e retorna ao inicio
     if tamanho not in ['P', 'M', 'G']:
         print('Tamanho inválido. Tente novamente\n')
         continue
-        
+    
     #Verifica qual sabor foi escolhido
     if sabor == 'CP':
-        #Verifica o tamanho solicitado e o total recebe a soma 
+        #Verifica o tamanho solicitado e o total recebe a soma
         if tamanho == 'P':
-            valor = 9 
+            valor = 9
         elif tamanho == 'M':
-            valor = 14 
+            valor = 14
         elif tamanho == 'G':
-            valor = 18 
+            valor = 18
         print(f'Você pediu um Cupuaçu no tamanho {tamanho}: R${valor}\n')
-                                            
-    if sabor == 'AC':  
+    
+    if sabor == 'AC':
         if tamanho == 'P':
-            valor = 11 
+            valor = 11
         elif tamanho == 'M':
-            valor = 16 
+            valor = 16
         elif tamanho == 'G':
-            valor = 20 
+            valor = 20
         print(f'Você pediu um Açaí no tamanho {tamanho}: R${valor}\n')
-        
+    
+    #Conta para no fim mostrar o total a ser pago    
     total += valor
      
     #Print perguntando se o usuario deseja algo a mais
@@ -64,7 +65,7 @@ while True:
         break
     
 #Ao escolher 'N' e mostrado o valor total a ser pago
-print(f'O valor total a ser pago: R${total}')
+print(f'\nO valor total a ser pago: R${total}')
                 
 
                 
