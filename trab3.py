@@ -1,3 +1,4 @@
+#Função para verificar se a escolha do usúario é valida 
 def escolha_servico(pergunta):
     opcoes = ['DIG', 'ICO','IPB','FOT']
     while True:
@@ -7,6 +8,7 @@ def escolha_servico(pergunta):
         else:
             print('Escolha inválida, entre com o tipo de serviço novamente\n')
             
+#Função para verificar a quantidade de páginas que o usúario deseja sendo o máximo 20000
 def num_pagina():
     while True:
         try:
@@ -24,6 +26,7 @@ def num_pagina():
         except ValueError:
             print('Digite um número inteiro\n')
             
+#Função que verifica se o usúario deseja adcionar algum tipo de serviço
 def servico_extra():
     while True:
         print('\nDeseja adicionar algum serviço?')
@@ -41,6 +44,7 @@ def servico_extra():
         else:
             print("Opção inválida. Por favor, escolha uma opção válida.")
 
+#Estrutura de repetição que recebe todos os dados das funções acima e verifica qual tipo de serviço, quantidade de páginas e se o usúario deseja o serviço extra
 while True:
     print('Bem-Vindo a Copiadora do Weslley Alves\n')
     op = escolha_servico('Entre com o tipo de serviço desejado\nDIG - Digitalização\nICO - Impressão Colorida\nIPB - Impressão Preto e Branco\nFOT - Fotocópia\n>> ')
