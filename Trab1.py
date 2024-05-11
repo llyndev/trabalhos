@@ -1,3 +1,5 @@
+#Trabalho basico para um app de vendas aplicando descontos
+
 #Mensagem de boas-vindas
 print('Bem-vindo a loja do Weslley Alves')
 
