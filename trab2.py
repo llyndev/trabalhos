@@ -1,3 +1,5 @@
+#Trabalho com estrutura de repetição usando uma loja de gelados
+
 #Mensagem de boas-vindas
 print('-Bem-vindo a Loja de Gelados do Weslley Alves-')
 print('-' * 18, 'Cardápio', '-' * 18)
