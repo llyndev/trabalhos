@@ -26,6 +26,6 @@ elif total >= 2500:
             desconto = total - (total * 11 / 100) # Calculando o valor total com desconto
             
 # Exibindo os resultados
-print(f'O valor SEM desconto R${total}\nO valor COM desconto R${desconto}')
+print(f'O valor SEM desconto R${total:.2f}\nO valor COM desconto R${desconto:.2f}')
     
     
