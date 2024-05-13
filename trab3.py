@@ -1,13 +1,18 @@
+#Trabalho serviços de uma copiadora
+
+#Print de Bem vindo
+print('Bem-Vindo a Copiadora do Weslley Alves\n')
+
 #Função para verificar se a escolha do usúario é valida 
 def escolha_servico(pergunta):
     #Lista
     opcoes = ['DIG', 'ICO','IPB','FOT']
     while True:
-        #Verifica se o que o usúario digitou esta na lista
         x = input(pergunta).upper()
+        #Verifica se o que o usúario digitou o que esta na lista
         if x in opcoes:
             return x
-        #Caso não estiver na list executa o print
+        #Caso não estiver na lista executa o print
         else:
             print('Escolha inválida, entre com o tipo de serviço novamente\n')
             
@@ -39,6 +44,7 @@ def servico_extra():
             print('2 - Encadernação Capa Dura - R$ 40.00')
             print('0 - Não deseja mais nada')
             escolha = input('>>')
+            #Verifica qual número da lista o usúario deseja e atribui o valor
             if escolha in ['1', '2', '0']:
                 if escolha == '1':
                     return 15
@@ -49,9 +55,8 @@ def servico_extra():
             else:
                 print("Opção inválida. Por favor, escolha uma opção válida.")
 
-#Estrutura de repetição que recebe todos os dados das funções acima e verifica qual tipo de serviço, quantidade de páginas e se o usúario deseja o serviço extra
+#Programa principal que recebe todos os dados das funções acima e verifica qual tipo de serviço, quantidade de páginas e se o usúario deseja o serviço extra
 while True:
-    print('Bem-Vindo a Copiadora do Weslley Alves\n')
     op = escolha_servico('Entre com o tipo de serviço desejado\nDIG - Digitalização\nICO - Impressão Colorida\nIPB - Impressão Preto e Branco\nFOT - Fotocópia\n>> ')
     if op == 'DIG':
         num_paginas = num_pagina()
@@ -70,7 +75,9 @@ while True:
         servico = 0.20
         extra = servico_extra()
         
+    #Váriavel total recebe o valor total do serviço solicitado
     total = (servico * num_paginas) + extra
         
+    #Print que executa ao fim do programa informando o valor total e cada valor individual    
     print(f'Total R${total:.2f} (serviço: R${servico:.2f} * páginas: R$ {num_paginas:.2f} + extra: R${extra:.2f})')
     break
